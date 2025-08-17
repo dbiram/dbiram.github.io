@@ -1,0 +1,278 @@
+.about {
+    min-height: 100vh;
+    background-color: var(--back-ground-color);
+    padding-top: 100px;
+}
+
+.container {
+    max-width: 120rem;
+    margin: auto;
+    width: 92%;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--title-color);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--primary-main);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about>.container>p {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.6;
+    color: var(--paragraph-color);
+    margin: 0;
+    max-width: 700px;
+    margin: 0 auto 90px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+}
+
+.about-content>div>h3 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+    font-size: 25px;
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+.about-info>div {
+    width: 100%;
+}
+
+.about-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-details>p {
+    font-size: 16px;
+    color: var(--paragraph-color);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+.about-details>p>span {
+    font-weight: bold;
+}
+
+.about-details>p>a {
+    color: var(--primary-main);
+    font-weight: bold;
+}
+
+.profilePic {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .profilePic {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.skills {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: rgba(153, 153, 153, .2);
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.skill>.skill-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.skill::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    z-index: 2;
+}
+
+.skill:hover::after {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+/* .skill:hover{
+    transform: translateY(-5px);
+    transition: 1s;
+} */
+
+.skill:hover>.skill-icon {
+    display: block;
+    z-index: 4;
+    transition: 1.3s;
+}
+
+.skill:hover>.skill-name {
+    color: transparent;
+}
+
+.html:hover::after {
+    background-color: var(--html-color);
+}
+
+.css:hover::after {
+    background-color: var(--css-color);
+}
+
+.java-script:hover::after {
+    background-color: var(--java-script-color);
+}
+
+.react:hover::after {
+    background-color: var(--react-color);
+}
+
+.redux:hover::after {
+    background-color: var(--redux-color);
+}
+
+.git:hover::after {
+    background-color: var(--git-color);
+}
+
+.git-hub:hover::after {
+    background-color: var(--github-color);
+}
+
+.java:hover::after {
+    background-color: var(--java-color);
+}
+
+.cpp:hover::after {
+    background-color: var(--cpp-color);
+}
+
+.problem-solving:hover::after {
+    background-color: var(--gmail-color);
+}
+
+.recoil:hover::after {
+    background-color: var(--recoil-color);
+}
+
+.react-query:hover::after {
+    background-color: var(--react-query-color);
+}
+
+.responsive:hover::after {
+    background-color: #009688;
+}
+
+.type-script:hover::after {
+    background-color: var(--type-script-color);
+}
+
+.python:hover::after {
+    background-color: var(--python-color);
+}
+
+.sql:hover::after {
+    background-color: var(--sql-color);
+}
+
+.ml:hover::after {
+    background-color: var(--ml-color);
+}
+
+.dl:hover::after {
+    background-color: var(--dl-color);
+}
+
+.data-eng:hover::after {
+    background-color: var(--data-eng-color);
+}
+
+.etl:hover::after {
+    background-color: var(--etl-color);
+}
+
+.forecasting:hover::after {
+    background-color: var(--forecasting-color);
+}
+
+.mlops:hover::after {
+    background-color: var(--mlops-color);
+}
+
+.fastapi:hover::after {
+    background-color: var(--fastapi-color);
+}
+
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+
+    .skills {
+        margin-bottom: 40px;
+    }
+}
