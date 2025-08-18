@@ -86,10 +86,230 @@
     margin-bottom: 30px;
 }
 
+.project-tags {
+    display: flex;
+    column-gap: 10px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.project-tag {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: rgba(153, 153, 153, .2);
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+.project-tag>.tag-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.project-tag::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.project-tag:hover::after {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.project-tag:hover>.tag-icon {
+    display: block;
+    z-index: 4;
+    transition: 0.3s;
+}
+
+.project-tag:hover>.tag-name {
+    color: transparent;
+}
+
 .project-buttons {
     display: flex;
     align-items: center;
     gap: 30px;
+}
+
+
+.html:hover::after {
+    background-color: var(--html-color);
+}
+
+.css:hover::after {
+    background-color: var(--css-color);
+}
+
+.java-script:hover::after {
+    background-color: var(--java-script-color);
+}
+
+.react:hover::after {
+    background-color: var(--react-color);
+}
+
+.redux:hover::after {
+    background-color: var(--redux-color);
+}
+
+.git:hover::after {
+    background-color: var(--git-color);
+}
+
+.git-hub:hover::after {
+    background-color: var(--github-color);
+}
+
+.java:hover::after {
+    background-color: var(--java-color);
+}
+
+.cpp:hover::after {
+    background-color: var(--cpp-color);
+}
+
+.problem-solving:hover::after {
+    background-color: var(--gmail-color);
+}
+
+.recoil:hover::after {
+    background-color: var(--recoil-color);
+}
+
+.react-query:hover::after {
+    background-color: var(--react-query-color);
+}
+
+.responsive:hover::after {
+    background-color: #009688;
+}
+
+.type-script:hover::after {
+    background-color: var(--type-script-color);
+}
+
+.python:hover::after {
+    background-color: var(--python-color);
+}
+
+.ml:hover::after {
+    background-color: var(--ml-color);
+}
+
+.fastapi:hover::after {
+    background-color: var(--fastapi-color);
+}
+
+.rag:hover::after {
+    background-color: var(--ml-color);
+}
+
+.llm:hover::after {
+    background-color: var(--dl-color);
+}
+
+.langchain:hover::after {
+    background-color: var(--python-color);
+}
+
+.computer-vision:hover::after {
+    background-color: var(--ml-color);
+}
+
+.docker:hover::after {
+    background-color: var(--docker-color);
+}
+
+.git:hover::after {
+    background-color: var(--git-color);
+}
+
+.grafana:hover::after {
+    background-color: var(--grafana-color);
+}
+
+.prometheus:hover::after {
+    background-color: var(--prometheus-color);
+}
+
+.react:hover::after {
+    background-color: var(--react-color);
+}
+
+.timeseries:hover::after {
+    background-color: var(--forecasting-color);
+}
+
+.feature-engineering:hover::after {
+    background-color: var(--etl-color);
+}
+
+.jupyter:hover::after {
+    background-color: var(--python-color);
+}
+
+.huggingface:hover::after {
+    background-color: var(--ml-color);
+}
+
+.joblib:hover::after {
+    background-color: var(--python-color);
+}
+
+.data-eng:hover::after {
+    background-color: var(--etl-color);
+}
+
+.etl:hover::after {
+    background-color: var(--etl-color);
+}
+
+.hdfs:hover::after {
+    background-color: var(--hdfs-color);
+}
+
+.avro:hover::after {
+    background-color: var(--avro-color);
+}
+
+.mongodb:hover::after {
+    background-color: var(--mongodb-color);
+}
+
+.postgresql:hover::after {
+    background-color: var(--postgresql-color);
+}
+
+.tableau:hover::after {
+    background-color: var(--tableau-color);
 }
 
 @media (max-width: 1100px) {

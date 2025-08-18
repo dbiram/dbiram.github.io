@@ -38,6 +38,26 @@
   --forecasting-color: #2196f3; 
   --mlops-color: #0db7ed;     
   --fastapi-color: #009688;   
+  --grafana-color: #F46800;   
+  --prometheus-color: #E6522C;
+  --docker-color: #2496ED;
+  --mongodb-color: #47A248;
+  --postgresql-color: #336791;
+  --tableau-color: #E97627;
+  --pandas-color: #130654;
+  --numpy-color: #4DABCF;
+  --scikit-color: #F7931E;
+  --pytorch-color: #EE4C2C;
+  --tensorflow-color: #FF6F00;
+  --langchain-color: #3178C6;
+  --spark-color: #E25A1C;
+  --airflow-color: #017CEE;
+  --dbt-color: #FF694B;
+  --hdfs-color: #FF652F;
+  --aws-color: #FF9900;
+  --hdfs-color: #00FFFF;
+  --avro-color: #A72058;
+  --redshift-color: #1f77b4;
 }
 
 html {

@@ -201,8 +201,24 @@
     background-color: var(--github-color);
 }
 
+.huggingface:hover::after {
+    background-color: var(--ml-color);
+}
+
 .java:hover::after {
     background-color: var(--java-color);
+}
+
+.docker:hover::after {
+    background-color: var(--docker-color);
+}
+
+.timeseries:hover::after {
+    background-color: var(--forecasting-color);
+}
+
+.scikit-learn:hover::after {
+    background-color: var(--ml-color);
 }
 
 .cpp:hover::after {
@@ -265,6 +281,98 @@
     background-color: var(--fastapi-color);
 }
 
+/* New skill colors */
+.pandas:hover::after {
+    background-color: var(--pandas-color);
+}
+
+.numpy:hover::after {
+    background-color: var(--numpy-color);
+}
+
+.scikit:hover::after {
+    background-color: var(--scikit-color);
+}
+
+.pytorch:hover::after {
+    background-color: var(--pytorch-color);
+}
+
+.tensorflow:hover::after {
+    background-color: var(--tensorflow-color);
+}
+
+.rl:hover::after {
+    background-color: var(--dl-color);
+}
+
+.rag:hover::after {
+    background-color: var(--ml-color);
+}
+
+.langchain:hover::after {
+    background-color: var(--langchain-color);
+}
+
+.cv:hover::after {
+    background-color: var(--ml-color);
+}
+
+.mlops:hover::after {
+    background-color: var(--mlops-color);
+}
+
+.spark:hover::after {
+    background-color: var(--spark-color);
+}
+
+.airflow:hover::after {
+    background-color: var(--airflow-color);
+}
+
+.dbt:hover::after {
+    background-color: var(--dbt-color);
+}
+
+.hdfs:hover::after {
+    background-color: var(--hdfs-color);
+}
+
+.postgresql:hover::after {
+    background-color: var(--postgresql-color);
+}
+
+.mongodb:hover::after {
+    background-color: var(--mongodb-color);
+}
+
+.redshift:hover::after {
+    background-color: var(--redshift-color);
+}
+
+.aws:hover::after {
+    background-color: var(--aws-color);
+}
+
+.tableau:hover::after {
+    background-color: var(--tableau-color);
+}
+
+.grafana:hover::after {
+    background-color: var(--grafana-color);
+}
+
+.prometheus:hover::after {
+    background-color: var(--prometheus-color);
+}
+
+.jupyter:hover::after {
+    background-color: var(--python-color);
+}
+
+.communication:hover::after {
+    background-color: var(--primary-main);
+}
 
 @media (max-width: 768px) {
     .about-content {
