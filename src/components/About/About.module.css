@@ -374,6 +374,19 @@
     background-color: var(--primary-main);
 }
 
+
+.redis:hover::after {
+    background-color: var(--redis-color);
+}
+
+.minio:hover::after {
+    background-color: var(--minio-color);
+}
+
+.onnx:hover::after {
+    background-color: var(--onnx-color);
+}
+
 @media (max-width: 768px) {
     .about-content {
         grid-template-columns: 1fr;

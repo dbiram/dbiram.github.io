@@ -195,7 +195,7 @@ const projects: Project[] = [
     {
         name: 'Fan-Engage: Football CV Analytics (Radar, Possession & Jobs)',
         link: 'https://www.youtube.com/watch?v=vHycGUliphA', 
-        github: 'https://github.com/yourname/fan-engage', 
+        github: 'https://github.com/dbiram/fan-engage', 
         description:
             'End-to-end football analytics: upload a match video → YOLOv8 player/ball detection → team assignment → pitch homography → live radar with Voronoi control zones → possession, territory, and momentum charts. Background processing via Redis/RQ keeps the UI responsive; artifacts (videos/frames/detections/homography) live in MinIO; FastAPI exposes clean endpoints; Next.js renders overlays and analytics synced to playback. Designed as multi-repo (API, Frontend, Workers, Infra, Contract), fully containerized with Docker and Postgres for metadata.',
         image: FanEngage, 
@@ -206,7 +206,7 @@ const projects: Project[] = [
             tagMap['Onnx'],
             tagMap['Redis'],
             tagMap['MinIO'],
-            tagMap['Postgres'],
+            tagMap['PostgreSQL'],
             tagMap['Docker'],
             tagMap['Git']
         ]
@@ -287,16 +287,18 @@ export default function  Projects(){
                                         ))}
                                     </div>
                                     <div className={style["project-buttons"]}>
-                                        <IconButton
-                                            width="170px"
-                                            height="50px"
-                                            backgroundColor="var(--primary-main)"
-                                            color="white"
-                                            link={project.link}
-                                            icon={<AiOutlineEye size="25px" color='white' />}
-                                        >
-                                            Live Demo
-                                        </IconButton>
+                                        {project.link && project.link !== '' && (
+                                            <IconButton
+                                                width="170px"
+                                                height="50px"
+                                                backgroundColor="var(--primary-main)"
+                                                color="white"
+                                                link={project.link}
+                                                icon={<AiOutlineEye size="25px" color='white' />}
+                                            >
+                                                Live Demo
+                                            </IconButton>
+                                        )}
                                         <IconButton
                                             width="100px"
                                             height="50px"
