@@ -58,6 +58,9 @@
   --hdfs-color: #00FFFF;
   --avro-color: #A72058;
   --redshift-color: #1f77b4;
+  --redis-color: #DC382D;
+  --onnx-color: #0093DD;
+  --minio-color: #C72C48;
 }
 
 html {

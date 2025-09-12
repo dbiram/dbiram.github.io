@@ -2,7 +2,7 @@ import type { JSX } from "react";
 import { AiFillGithub, AiOutlineEye } from "react-icons/ai";
 import IconButton from '../../common/components/IconButton/IconButton';
 import style from './Projects.module.css';
-import { SiPython, SiDocker, SiFastapi, SiJupyter, SiPrometheus, SiGrafana, SiHuggingface, SiLangchain, SiMongodb, SiPostgresql, SiTableau, SiApache, SiApachehadoop } from 'react-icons/si';
+import { SiPython, SiDocker, SiFastapi, SiJupyter, SiPrometheus, SiGrafana, SiHuggingface, SiLangchain, SiMongodb, SiPostgresql, SiTableau, SiApache, SiApachehadoop, SiRedis, SiMinio, SiOnnx, SiPytorch } from 'react-icons/si';
 import { FaBrain, FaCogs, FaChartLine, FaReact, FaRobot, FaEye, FaDatabase } from 'react-icons/fa';
 import { BsGit } from 'react-icons/bs';
 
@@ -11,6 +11,7 @@ import ChurnPrediction from '../../assets/images/churn-prediction.png';
 import DietAssistant from '../../assets/images/diet-assistant.png';
 import IphoneSalesForecast from '../../assets/images/iphone-sales-forecast.png';
 import TwitterPlayerPerformance from '../../assets/images/twitter-player-performance.png';
+import FanEngage from '../../assets/images/fan-engage.png';
 
 
 interface Tag {
@@ -148,6 +149,26 @@ const tagMap: { [key: string]: Tag } = {
         name: 'Tableau',
         icon: <SiTableau size="25px" color="white" />,
         cssName: "tableau"
+    },
+    'Redis': {
+        name: 'Redis',
+        icon: <SiRedis size="25px" color="white" />,
+        cssName: "redis"
+    },
+    'MinIO': {
+        name: 'MinIO',
+        icon: <SiMinio size="25px" color="white" />,
+        cssName: "minio"
+    },
+    'Onnx': {
+        name: 'Onnx',
+        icon: <SiOnnx size="25px" color="white" />,
+        cssName: "onnx"
+    },
+    'Pytorch': {
+        name: 'Pytorch',
+        icon: <SiPytorch size="25px" color="white" />,
+        cssName: "pytorch"
     }
 };
 
@@ -171,6 +192,25 @@ const projects: Project[] = [
             tagMap['React']
         ]
     },
+    {
+        name: 'Fan-Engage: Football CV Analytics (Radar, Possession & Jobs)',
+        link: 'https://www.youtube.com/watch?v=vHycGUliphA', 
+        github: 'https://github.com/yourname/fan-engage', 
+        description:
+            'End-to-end football analytics: upload a match video → YOLOv8 player/ball detection → team assignment → pitch homography → live radar with Voronoi control zones → possession, territory, and momentum charts. Background processing via Redis/RQ keeps the UI responsive; artifacts (videos/frames/detections/homography) live in MinIO; FastAPI exposes clean endpoints; Next.js renders overlays and analytics synced to playback. Designed as multi-repo (API, Frontend, Workers, Infra, Contract), fully containerized with Docker and Postgres for metadata.',
+        image: FanEngage, 
+        tags: [
+            tagMap['FastAPI'],
+            tagMap['React'],
+            tagMap['Computer Vision'],
+            tagMap['Onnx'],
+            tagMap['Redis'],
+            tagMap['MinIO'],
+            tagMap['Postgres'],
+            tagMap['Docker'],
+            tagMap['Git']
+        ]
+        },
     {
         name: 'Time Series Forecasting for Iphone Sales',
         link: 'https://huggingface.co/spaces/dbiram/iphone-sales-forecast',

@@ -312,6 +312,22 @@
     background-color: var(--tableau-color);
 }
 
+.redis:hover::after {
+    background-color: var(--redis-color);
+}
+
+.minio:hover::after {
+    background-color: var(--minio-color);
+}
+
+.pytorch:hover::after {
+    background-color: var(--pytorch-color);
+}
+
+.onnx:hover::after {
+    background-color: var(--onnx-color);
+}
+
 @media (max-width: 1100px) {
     .project {
         grid-template-columns: 1fr;

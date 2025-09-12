@@ -25,7 +25,10 @@ import {
   SiApachehadoop,
   SiAmazon,
   SiReact,
-  SiAmazonredshift
+  SiAmazonredshift,
+  SiRedis,
+  SiOnnx,
+  SiMinio
 } from 'react-icons/si';
 import { 
   FaBrain, 
@@ -57,6 +60,7 @@ const skills = [
   { name: 'FastAPI', icon: <SiFastapi size="25px" color="white" />, cssName: "fastapi" },
   { name: 'Docker', icon: <SiDocker size="25px" color="white" />, cssName: "docker" },
   { name: 'MLOps', icon: <FaCogs size="25px" color="white" />, cssName: "mlops" },
+  { name: 'Onnx', icon: <SiOnnx size="25px" color="white" />, cssName: "onnx" },
   { name: 'Apache Spark', icon: <SiApachespark size="25px" color="white" />, cssName: "spark" },
   { name: 'Airflow', icon: <SiApacheairflow size="25px" color="white" />, cssName: "airflow" },
   { name: 'dbt', icon: <SiDbt size="25px" color="white" />, cssName: "dbt" },
@@ -64,6 +68,8 @@ const skills = [
   { name: 'PostgreSQL', icon: <SiPostgresql size="25px" color="white" />, cssName: "postgresql" },
   { name: 'MongoDB', icon: <SiMongodb size="25px" color="white" />, cssName: "mongodb" },
   { name: 'Redshift', icon: <SiAmazonredshift size="25px" color="white" />, cssName: "redshift" }, 
+  { name: 'Redis', icon: <SiRedis size="25px" color="white" />, cssName: "redis" }, 
+  { name: 'MinIO', icon: <SiMinio size="25px" color="white" />, cssName: "minio" },
   { name: 'AWS', icon: <SiAmazon size="25px" color="white" />, cssName: "aws" },
   { name: 'React', icon: <SiReact size="25px" color="white" />, cssName: "react" },
   { name: 'Tableau', icon: <SiTableau size="25px" color="white" />, cssName: "tableau" },
