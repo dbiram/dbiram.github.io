@@ -1,3 +1,16 @@
+import { useEffect, useState } from "react";
+// Custom hook to get window width
+function useWindowWidth() {
+    const [width, setWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return width;
+}
 import type { JSX } from "react";
 import { AiFillGithub, AiOutlineEye } from "react-icons/ai";
 import IconButton from '../../common/components/IconButton/IconButton';
@@ -262,7 +275,15 @@ const projects: Project[] = [
     }
 ];
 
-export default function  Projects(){
+export default function Projects() {
+    const width = useWindowWidth();
+    // Responsive button sizes
+    const isMobile = width < 768;
+    const liveDemoBtnWidth = isMobile ? "120px" : "170px";
+    const liveDemoBtnHeight = isMobile ? "40px" : "50px";
+    const githubBtnWidth = isMobile ? "80px" : "100px";
+    const githubBtnHeight = isMobile ? "40px" : "50px";
+
     return (
         <div id='Projects' className={style.projects}>
             <div className={style.container}>
@@ -271,51 +292,56 @@ export default function  Projects(){
                 <div className={style["projects-list"]}>
                     {
                         projects.map((project, index) => {
-                            return <div key={`project${index}`} className={style.project}>
-                                <div className={style["project-image"]}>
-                                    <img src={project.image} alt="Project Image" />
-                                </div>
-                                <div className={style["project-info"]}>
-                                    <h3>{project.name}</h3>
-                                    <p>{project.description}</p>
-                                    <div className={style["project-tags"]}>
-                                        {project.tags?.map((tag, tagIndex) => (
-                                            <div key={`${index}-${tagIndex}`} className={`${style["project-tag"]} ${style[tag.cssName]}`}>
-                                                <div className={style["tag-name"]}>{tag.name}</div>
-                                                <div className={style["tag-icon"]}>{tag.icon}</div>
-                                            </div>
-                                        ))}
+                            return (
+                                <div key={`project${index}`} className={style.project}>
+                                    <div className={style["project-title-mobile"]}>
+                                        <h3>{project.name}</h3>
                                     </div>
-                                    <div className={style["project-buttons"]}>
-                                        {project.link && project.link !== '' && (
+                                    <div className={style["project-image"]}>
+                                        <img src={project.image} alt="Project Image" />
+                                    </div>
+                                    <div className={style["project-info"]}>
+                                        <h3 className={style["project-title-desktop"]}>{project.name}</h3>
+                                        <p>{project.description}</p>
+                                        <div className={style["project-tags"]}>
+                                            {project.tags?.map((tag, tagIndex) => (
+                                                <div key={`${index}-${tagIndex}`} className={`${style["project-tag"]} ${style[tag.cssName]}`}>
+                                                    <div className={style["tag-name"]}>{tag.name}</div>
+                                                    <div className={style["tag-icon"]}>{tag.icon}</div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className={style["project-buttons"]}>
+                                            {project.link && project.link !== '' && (
+                                                <IconButton
+                                                    width={liveDemoBtnWidth}
+                                                    height={liveDemoBtnHeight}
+                                                    backgroundColor="var(--primary-main)"
+                                                    color="white"
+                                                    link={project.link}
+                                                    icon={<AiOutlineEye size="25px" color='white' />}
+                                                >
+                                                    Live Demo
+                                                </IconButton>
+                                            )}
                                             <IconButton
-                                                width="170px"
-                                                height="50px"
-                                                backgroundColor="var(--primary-main)"
+                                                width={githubBtnWidth}
+                                                height={githubBtnHeight}
+                                                backgroundColor="black"
                                                 color="white"
-                                                link={project.link}
-                                                icon={<AiOutlineEye size="25px" color='white' />}
+                                                link={project.github}
+                                                icon={<AiFillGithub size="25px" color='white' />}
                                             >
-                                                Live Demo
+                                                Github
                                             </IconButton>
-                                        )}
-                                        <IconButton
-                                            width="100px"
-                                            height="50px"
-                                            backgroundColor="black"
-                                            color="white"
-                                            link={project.github}
-                                            icon={<AiFillGithub size="25px" color='white' />}
-                                        >
-                                            Github
-                                        </IconButton>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            );
                         })
                     }
                 </div>
             </div>
         </div>
     );
-};
+}

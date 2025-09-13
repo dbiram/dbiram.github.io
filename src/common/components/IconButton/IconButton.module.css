@@ -18,6 +18,12 @@
     transition: 1s;
 }
 
+@media (max-width: 768px) {
+    .text {
+        font-size: 11px;
+    }
+}
+
 .icon {
     position: absolute;
     bottom: -20px;

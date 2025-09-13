@@ -7,12 +7,14 @@ import Footer from './components/Footer/Footer';
 
 import style from './App.module.css';
 import Home from './components/Home/Home';
+import React, { useState } from 'react';
 
 export default function App() {
+  const [menu, setMenu] = useState(false);
   return (
     <div className={style.app}>
-      <Navbar />
-      <Home />
+      <Navbar menu={menu} setMenu={setMenu} />
+      <Home menu={menu} />
       <About />
       <Projects />
       <Contact />

@@ -1,15 +1,13 @@
-import { useState } from 'react';
+import React from 'react';
 import { VscGraph } from "react-icons/vsc";
 import style from './Navbar.module.css';
 
-export default function Navbar(){
-    const [menu, setMenu] = useState(false);
-
+export default function Navbar({ menu, setMenu }: { menu: boolean, setMenu: React.Dispatch<React.SetStateAction<boolean>> }) {
     return (
         <>
             <div className={style.nav}>
                 <a className={style.logo} href="#Home">
-                    <VscGraph  color='var(--primary-main)' size='50px' />
+                    <VscGraph  color='var(--primary-main)' className={style.logoIcon} />
                     <h5>moez dbira</h5>
                 </a>
                 <ul>

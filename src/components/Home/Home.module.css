@@ -74,8 +74,11 @@
 }
 
 .scroll-icon {
-    position: absolute;
-    bottom: 20px;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 .scroll-down {
@@ -169,22 +172,8 @@
     }
 }
 
-@media (max-width: 768px) {
-    .home-content>h1 {
-        font-size: 35px;
-    }
-
-    .home-content>p {
-        font-size: 16px;
-    }
-
-    .contact-nav {
-        bottom: 20px;
-    }
-}
-
 .contact-nav {
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 50px;
     display: flex;
@@ -234,4 +223,41 @@
 .git:hover {
     background-color: var(--git-color);
     transition: .3s;
+}
+
+
+@media (max-width: 768px) {
+    .home-content>h1 {
+        font-size: 35px;
+    }
+
+    .home-content>p {
+        font-size: 16px;
+    }
+
+    .scroll-icon {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact-nav {
+        position: static;
+        width: auto;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        margin-top: 20px;
+    }
+
+    .contact-nav > a {
+        background: white;
+        margin: 0 6px;
+        box-shadow: 0 0 10px #ddd;
+        border-radius: 5px;
+        padding: 10px;
+    }
 }
