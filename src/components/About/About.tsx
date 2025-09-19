@@ -41,45 +41,54 @@ import {
 import { BsGit } from 'react-icons/bs';
 import { PiShareNetworkDuotone } from 'react-icons/pi';
 
-const skills = [
-  { name: 'Python', icon: <SiPython size="25px" color="white" />, cssName: "python" },
-  { name: 'SQL', icon: <FaDatabase size="25px" color="white" />, cssName: "sql" },
-  { name: 'Pandas', icon: <SiPandas size="25px" color="white" />, cssName: "pandas" },
-  { name: 'NumPy', icon: <SiNumpy size="25px" color="white" />, cssName: "numpy" },
-  { name: 'scikit-learn', icon: <SiScikitlearn size="25px" color="white" />, cssName: "scikit-learn" },
-  { name: 'PyTorch', icon: <SiPytorch size="25px" color="white" />, cssName: "pytorch" },
-  { name: 'TensorFlow', icon: <SiTensorflow size="25px" color="white" />, cssName: "tensorflow" },
-  { name: 'Machine Learning', icon: <FaBrain size="25px" color="white" />, cssName: "ml" },
-  { name: 'Deep Learning', icon: <PiShareNetworkDuotone size="25px" color="white" />, cssName: "dl" },
-  { name: 'Time Series Forecasting', icon: <FaChartLine size="25px" color="white" />, cssName: "timeseries" },
-  { name: 'Reinforcement Learning', icon: <FaRobot size="25px" color="white" />, cssName: "rl" },
-  { name: 'LangChain', icon: <SiLangchain size="25px" color="white" />, cssName: "langchain" },
-  { name: 'Hugging Face', icon: <SiHuggingface size="25px" color="white" />, cssName: "huggingface" },
-  { name: 'Computer Vision', icon: <FaEye size="25px" color="white" />, cssName: "cv" },
-  { name: 'RAG', icon: <FaRobot size="25px" color="white" />, cssName: "rag" },
-  { name: 'FastAPI', icon: <SiFastapi size="25px" color="white" />, cssName: "fastapi" },
-  { name: 'Docker', icon: <SiDocker size="25px" color="white" />, cssName: "docker" },
-  { name: 'MLOps', icon: <FaCogs size="25px" color="white" />, cssName: "mlops" },
-  { name: 'Onnx', icon: <SiOnnx size="25px" color="white" />, cssName: "onnx" },
-  { name: 'Apache Spark', icon: <SiApachespark size="25px" color="white" />, cssName: "spark" },
-  { name: 'Airflow', icon: <SiApacheairflow size="25px" color="white" />, cssName: "airflow" },
-  { name: 'dbt', icon: <SiDbt size="25px" color="white" />, cssName: "dbt" },
-  { name: 'HDFS', icon: <SiApachehadoop size="25px" color="white" />, cssName: "hdfs" },
-  { name: 'PostgreSQL', icon: <SiPostgresql size="25px" color="white" />, cssName: "postgresql" },
-  { name: 'MongoDB', icon: <SiMongodb size="25px" color="white" />, cssName: "mongodb" },
-  { name: 'Redshift', icon: <SiAmazonredshift size="25px" color="white" />, cssName: "redshift" }, 
-  { name: 'Redis', icon: <SiRedis size="25px" color="white" />, cssName: "redis" }, 
-  { name: 'MinIO', icon: <SiMinio size="25px" color="white" />, cssName: "minio" },
-  { name: 'AWS', icon: <SiAmazon size="25px" color="white" />, cssName: "aws" },
-  { name: 'React', icon: <SiReact size="25px" color="white" />, cssName: "react" },
-  { name: 'Tableau', icon: <SiTableau size="25px" color="white" />, cssName: "tableau" },
-  { name: 'Grafana', icon: <SiGrafana size="25px" color="white" />, cssName: "grafana" },
-  { name: 'Prometheus', icon: <SiPrometheus size="25px" color="white" />, cssName: "prometheus" },
-  { name: 'Jupyter', icon: <SiJupyter size="25px" color="white" />, cssName: "jupyter" },
-  { name: 'Git', icon: <BsGit size="25px" color="white" />, cssName: "git" },
-  { name: 'Problem Solving', icon: <FaCogs size="25px" color="white" />, cssName: "problem-solving" },
-  { name: 'Communication Skills', icon: <FaBrain size="25px" color="white" />, cssName: "communication" }
-];
+
+const categorizedSkills = {
+  'Programming': [
+    { name: 'Python', icon: <SiPython size="25px" color="white" />, cssName: "python" },
+    { name: 'SQL', icon: <FaDatabase size="25px" color="white" />, cssName: "sql" },
+    { name: 'Pandas', icon: <SiPandas size="25px" color="white" />, cssName: "pandas" },
+    { name: 'NumPy', icon: <SiNumpy size="25px" color="white" />, cssName: "numpy" },
+    { name: 'scikit-learn', icon: <SiScikitlearn size="25px" color="white" />, cssName: "scikit-learn" },
+    { name: 'React', icon: <SiReact size="25px" color="white" />, cssName: "react" },
+    { name: 'Git', icon: <BsGit size="25px" color="white" />, cssName: "git" },
+  ],
+  'Machine Learning & AI': [
+    { name: 'Machine Learning', icon: <FaBrain size="25px" color="white" />, cssName: "ml" },
+    { name: 'Deep Learning', icon: <PiShareNetworkDuotone size="25px" color="white" />, cssName: "dl" },
+    { name: 'Time Series Forecasting', icon: <FaChartLine size="25px" color="white" />, cssName: "timeseries" },
+    { name: 'Reinforcement Learning', icon: <FaRobot size="25px" color="white" />, cssName: "rl" },
+    { name: 'Computer Vision', icon: <FaEye size="25px" color="white" />, cssName: "cv" },
+    { name: 'Onnx', icon: <SiOnnx size="25px" color="white" />, cssName: "onnx" },
+  ],
+  'LLMs & Generative AI': [
+    { name: 'LangChain', icon: <SiLangchain size="25px" color="white" />, cssName: "langchain" },
+    { name: 'Hugging Face', icon: <SiHuggingface size="25px" color="white" />, cssName: "huggingface" },
+    { name: 'RAG', icon: <FaRobot size="25px" color="white" />, cssName: "rag" },
+  ],
+  'Data Engineering & MLOps': [
+    { name: 'FastAPI', icon: <SiFastapi size="25px" color="white" />, cssName: "fastapi" },
+    { name: 'Docker', icon: <SiDocker size="25px" color="white" />, cssName: "docker" },
+    { name: 'MLOps', icon: <FaCogs size="25px" color="white" />, cssName: "mlops" },
+    { name: 'Apache Spark', icon: <SiApachespark size="25px" color="white" />, cssName: "spark" },
+    { name: 'Airflow', icon: <SiApacheairflow size="25px" color="white" />, cssName: "airflow" },
+    { name: 'dbt', icon: <SiDbt size="25px" color="white" />, cssName: "dbt" },
+    { name: 'HDFS', icon: <SiApachehadoop size="25px" color="white" />, cssName: "hdfs" },
+    { name: 'AWS', icon: <SiAmazon size="25px" color="white" />, cssName: "aws" },
+    { name: 'MinIO', icon: <SiMinio size="25px" color="white" />, cssName: "minio" },
+  ],
+  'Databases, Visualization & Other skills': [
+    { name: 'PostgreSQL', icon: <SiPostgresql size="25px" color="white" />, cssName: "postgresql" },
+    { name: 'MongoDB', icon: <SiMongodb size="25px" color="white" />, cssName: "mongodb" },
+    { name: 'Redshift', icon: <SiAmazonredshift size="25px" color="white" />, cssName: "redshift" },
+    { name: 'Redis', icon: <SiRedis size="25px" color="white" />, cssName: "redis" },
+    { name: 'Tableau', icon: <SiTableau size="25px" color="white" />, cssName: "tableau" },
+    { name: 'Grafana', icon: <SiGrafana size="25px" color="white" />, cssName: "grafana" },
+    { name: 'Prometheus', icon: <SiPrometheus size="25px" color="white" />, cssName: "prometheus" },
+    { name: 'Jupyter', icon: <SiJupyter size="25px" color="white" />, cssName: "jupyter" },
+    { name: 'Problem Solving', icon: <FaCogs size="25px" color="white" />, cssName: "problem-solving" },
+    { name: 'Communication Skills', icon: <FaBrain size="25px" color="white" />, cssName: "communication" },
+  ]
+};
 
 
 export default function About(){
@@ -110,14 +119,19 @@ export default function About(){
                 <div className={style["my-skill"]}>
                     <h3>My Skills</h3>
                     <div className={style.skills}>
-                        {
-                            skills.map((skill, index) => {
-                                return <div key={`skill${index}`} className={`${style.skill} ${style[skill.cssName]}`}>
-                                    <div className={style["skill-name"]}>{skill.name}</div>
-                                    <div className={style["skill-icon"]}>{skill.icon}</div>
-                                </div>
-                            })
-                        }
+                      {Object.entries(categorizedSkills).map(([category, skillsArr], catIdx) => (
+                        <div key={category} style={{width: '100%'}}>
+                          <div style={{fontWeight: 'bold', fontSize: '15px', margin: '18px 0 10px 0', color: 'var(--title-color)'}}>{category}</div>
+                          <div style={{display: 'flex', flexWrap: 'wrap', gap: '10px 10px'}}>
+                            {skillsArr.map((skill, idx) => (
+                              <div key={`skill${catIdx}-${idx}`} className={`${style.skill} ${style[skill.cssName]}`}>
+                                <div className={style["skill-name"]}>{skill.name}</div>
+                                <div className={style["skill-icon"]}>{skill.icon}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                 </div>
             </div>
