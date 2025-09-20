@@ -24,7 +24,7 @@ export default function Contact() {
 
     // Set width for fields and button
     const fieldWidth = isSmallScreen ? '100%' : '700px';
-    const buttonWidth = isSmallScreen ? fieldWidth : '200px';
+    //const buttonWidth = isSmallScreen ? fieldWidth : '200px';
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
