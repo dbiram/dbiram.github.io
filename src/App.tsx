@@ -10,7 +10,7 @@ import FloatingChatIcon from './components/FloatingChatIcon';
 import style from './App.module.css';
 import Home from './components/Home/Home';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function App() {
   const [menu, setMenu] = useState(false);
