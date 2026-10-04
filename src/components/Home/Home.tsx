@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { BiLogoGmail } from "react-icons/bi";
 import DownloadButton from '../../common/components/DownloadButton/DownloadButton';
-import cv from '../../assets/files/resume.pdf';
+import cv from '../../assets/files/AI_engineer_resume.pdf';
 import style from './Home.module.css';
 
 
